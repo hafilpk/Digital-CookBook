@@ -3,6 +3,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import MealPlanner from "./pages/MealPlanner";
 import Pantry from "./pages/Pantry";
+import ShoppingList from "./pages/ShoppingList";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <li className="nav-item"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/mealplanner">Meal Planner</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/pantry">Pantry</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/shopping-list">Shopping List</Link></li>
           </ul>
         </div>
       </nav>
@@ -24,6 +26,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mealplanner" element={<MealPlanner />} />
           <Route path="/pantry" element={<Pantry />} />
+          <Route path="/shopping-list" element={<ShoppingList />} />
         </Routes>
       </div>
     </div>
