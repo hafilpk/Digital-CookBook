@@ -29,16 +29,18 @@ class PantryItemViewSet(viewsets.ModelViewSet):
         serializer.save(user=self.request.user)
 
 class MealPlanViewSet(viewsets.ModelViewSet):
+    queryset = MealPlan.objects.all()
     serializer_class = MealPlanSerializer
     permission_classes = [permissions.IsAuthenticated]
 
     def get_queryset(self):
-        return MealPlan.objects.filter(user=self.request.user).order_by("-start_date")
+        return MealPlan.objects.filter(user=self.request.user).order_by("-week_start")
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
 
 class MealPlanEntryViewSet(viewsets.ModelViewSet):
+    queryset = MealPlanEntry.objects.all()
     serializer_class = MealPlanEntrySerializer
     permission_classes = [permissions.IsAuthenticated]
 

@@ -20,7 +20,7 @@ class PantryItemAdmin(admin.ModelAdmin):
 
 @admin.register(MealPlan)
 class MealPlanAdmin(admin.ModelAdmin):
-    list_display = ("user", "name", "start_date")
+    list_display = ("user", "name", "week_start")
 
 @admin.register(MealPlanEntry)
 class MealPlanEntryAdmin(admin.ModelAdmin):

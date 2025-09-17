@@ -64,11 +64,11 @@ class PantryItem(models.Model):
 class MealPlan(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, related_name="meal_plans", on_delete=models.CASCADE)
     name = models.CharField(max_length=255, default="Weekly Plan")
-    start_date = models.DateField()
+    week_start = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.name} ({self.start_date})"
+        return f"{self.name} ({self.week_start})"
 
 class MealPlanEntry(models.Model):
     MEAL_CHOICES = [
