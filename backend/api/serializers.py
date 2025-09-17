@@ -49,9 +49,6 @@ class MealPlanEntrySerializer(serializers.ModelSerializer):
     recipe_id = serializers.PrimaryKeyRelatedField(
         queryset=Recipe.objects.all(), source="recipe", write_only=True
     )
-    mealplan_id = serializers.PrimaryKeyRelatedField(
-        queryset=MealPlan.objects.all(), source="mealplan", write_only=True
-    )
 
     class Meta:
         model = MealPlanEntry

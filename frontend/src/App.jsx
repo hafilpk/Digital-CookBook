@@ -2,6 +2,7 @@ import { Routes, Route, Link } from "react-router-dom";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import MealPlanner from "./pages/MealPlanner";
+import Pantry from "./pages/Pantry";
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
           <ul className="navbar-nav me-auto">
             <li className="nav-item"><Link className="nav-link" to="/dashboard">Dashboard</Link></li>
             <li className="nav-item"><Link className="nav-link" to="/mealplanner">Meal Planner</Link></li>
+            <li className="nav-item"><Link className="nav-link" to="/pantry">Pantry</Link></li>
           </ul>
         </div>
       </nav>
@@ -21,6 +23,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/mealplanner" element={<MealPlanner />} />
+          <Route path="/pantry" element={<Pantry />} />
         </Routes>
       </div>
     </div>
